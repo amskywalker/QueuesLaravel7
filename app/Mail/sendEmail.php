@@ -31,7 +31,7 @@ class sendEmail extends Mailable
     public function build()
     {
         $this->to($this->user->email,$this->user->name);
-        $this->subject('seguimos testando');
+        $this->subject('Your Subject');
         return $this->markdown('userRegistered',['user'=> $this->user]);
     }
 }

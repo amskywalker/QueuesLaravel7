@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 
 class MailController extends Controller
 {
-    public function index(){
-
-        return view('cadastro');
+    public function index()
+    {
+        return view('register');
     }
     public function sendEmail(Request $request){
         $user = new User();
@@ -19,6 +19,6 @@ class MailController extends Controller
         $user->password = $request->password;
         $user->save();
         dd(JobMail::dispatch($user)->delay(now()->addSeconds(15)));
-        // return response() ->json('Salvo',200);
+            return response() ->json('Save',200);
         }
 }
