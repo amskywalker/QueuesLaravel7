@@ -10,7 +10,7 @@ Text for Laravel Documentation for more acess [Laravel Documentation](<https://l
 You can install the laravel 7 using the command:
 
 ```
-    create-project --prefer-dist laravel/laravel blog**
+    create-project --prefer-dist laravel/laravel blog
 ```
 
 The queues are formats for tasks that will are store at the location you define, in this example we will use the database for store our queues, and we will send email (gmail), for send email google you need active the [Step Verification](https://myaccount.google.com/signinoptions/two-step-verification/enroll-welcome)
