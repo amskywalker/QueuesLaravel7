@@ -12,5 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/cadastrar', 'MailController@index')->name('new.index');
-Route::post('/cadastro', 'MailController@sendEmail')->name('send.email');
+Route::post('/sendEmail', 'MailController@sendEmail')->name('send.email');
+
+Route::get('/',function(){
+        return view('mail');
+});

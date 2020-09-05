@@ -13,12 +13,8 @@ class MailController extends Controller
         return view('register');
     }
     public function sendEmail(Request $request){
-        $user = new User();
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->password = $request->password;
-        $user->save();
-        dd(JobMail::dispatch($user)->delay(now()->addSeconds(15)));
-            return response() ->json('Save',200);
+        
+        dd(JobMail::dispatch($request->senderemail,$request->content)->delay(now()->addSeconds(15)));
+        return response() ->json('Save',200);
         }
 }

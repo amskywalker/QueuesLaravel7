@@ -3,7 +3,6 @@
 namespace App\Jobs;
 
 use App\Mail\sendEmail;
-use App\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -15,15 +14,17 @@ class JobMail implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    private $user;
+    private $senderemail;
+    private $content;
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct( User $user)
+    public function __construct( $senderemail, $content)
     {
-        $this->user = $user;
+        $this->senderemail = $senderemail;
+        $this->content = $content;
     }
 
     /**
@@ -33,6 +34,6 @@ class JobMail implements ShouldQueue
      */
     public function handle()
     {
-        Mail::send(new sendEmail($this->user));
+        Mail::send(new sendEmail($this->senderemail,$this->content));
     }
 }
