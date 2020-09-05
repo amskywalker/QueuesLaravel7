@@ -5,12 +5,10 @@ The queue configuration file is stored in config/queue.php. In this file you wil
 
 Text for Laravel Documentation for more acess [Laravel Documentation](<https://laravel.com/docs/>)
 
-# Setting up the project
-
-You can install the laravel 7 using the command:
-
+# Getting Start
+    Run
 ```
-    create-project --prefer-dist laravel/laravel blog
+    npm install
 ```
 
 The queues are formats for tasks that will are store at the location you define, in this example we will use the database for store our queues, and we will send email (gmail), for send email google you need active the [Step Verification](https://myaccount.google.com/signinoptions/two-step-verification/enroll-welcome)
