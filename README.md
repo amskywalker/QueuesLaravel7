@@ -5,10 +5,18 @@ The queue configuration file is stored in config/queue.php. In this file you wil
 
 Text for Laravel Documentation for more acess [Laravel Documentation](<https://laravel.com/docs/>)
 
+# Important
+
+Whenever you need to modify your queue settings use the command:
+
+```
+    php artisan queue:restart
+```
+
 # Getting Start
     
 ```
-    npm install
+    run  npm install
 ```
 
 The queues are formats for tasks that will are store at the location you define, in this example we will use the database for store our queues, and we will send email (gmail), for send email google you need active the [Step Verification](https://myaccount.google.com/signinoptions/two-step-verification/enroll-welcome)
@@ -140,10 +148,4 @@ To personalize your email
     php artisan vendor:publish --tag=laravel-mail
 ```
 
-# Important
 
-Whenever you need to modify your queue settings use the command:
-
-```
-    php artisan queue:restart
-```
