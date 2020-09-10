@@ -6,7 +6,9 @@ The queue configuration file is stored in config/queue.php. In this file you wil
 Text for Laravel Documentation for more acess [Laravel Documentation](<https://laravel.com/docs/>)
 
 # Getting Start
+
     Run
+    
 ```
     npm install
 ```
