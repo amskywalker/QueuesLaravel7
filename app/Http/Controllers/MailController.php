@@ -14,7 +14,7 @@ class MailController extends Controller
     }
     public function sendEmail(Request $request){
         
-        dd(JobMail::dispatch($request->senderemail,$request->content)->delay(now()->addSeconds(15)));
-        return response() ->json('Save',200);
+        JobMail::dispatch($request->senderemail,$request->content)->delay(now()->addSeconds(15));
+        return redirect()->route('sendMail')->with('status', 'Email Enviado');
         }
 }
