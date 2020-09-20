@@ -16,4 +16,4 @@ Route::post('/sendEmail', 'MailController@sendEmail')->name('send.email');
 
 Route::get('/',function(){
         return view('mail');
-});
+})->name('sendMail');

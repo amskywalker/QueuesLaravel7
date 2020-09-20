@@ -32,6 +32,11 @@
                 </svg>
             </div>
             <div class="container">
+            @if (session('status'))
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
+                @endif
             <form autocomplete="off" method="POST" action="{{route('send.email')}}">
                 @csrf
                     <div class="form-group">
